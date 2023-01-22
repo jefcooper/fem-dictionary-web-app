@@ -1,0 +1,27 @@
+{
+  "name": "fem-template",
+  "version": "1.0.0",
+  "description": "Front-end mentor Template Repository",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jefcooper/fem-template.git"
+  },
+  "author": "Jeff Cooper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jefcooper/fem-template/issues"
+  },
+  "homepage": "https://github.com/jefcooper/fem-template#readme",
+  "devDependencies": {
+    "glob": "^8.0.3",
+    "path": "^0.12.7",
+    "sass": "^1.57.1",
+    "vite": "^4.0.4"
+  }
+}

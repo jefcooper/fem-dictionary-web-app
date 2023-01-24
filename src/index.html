@@ -15,13 +15,31 @@
 
 <body>
   <header class="header">
-    <!-- font, theme settings -->
-    <!-- search -->
-    <input type="text" name="search-term" id="search-term">
-    <button type="button" class="btn" id="search-button">Search</button>
+    <div class="settings">
+      <span class="logo"></span>
+      <div class="font"></div>
+      <input type="checkbox" name="toggle-dark" id="toggle-dark">
+      <!-- font, theme settings -->
+    </div>
+    <div class="search">
+      <!-- search -->
+      <input type="text" name="search-term" id="search-term">
+      <button type="button" class="btn" id="search-button">Search</button>
+    </div>
   </header>
 
   <main class="main">
+    <p id="result-word">Keyboard</p>
+    <p id="result-pronunciation">/ˈkiːbɔːd/</p>
+    <figure>
+      <figcaption>Listen to the pronunciation</figcaption>
+      <audio id="result-audio" controls src="https://api.dictionaryapi.dev/media/pronunciations/en/keyboard-us.mp3">
+      </audio>
+    </figure>
+    <!-- word -->
+    <!-- phonetic -->
+    <!-- audio -->
+
     <!-- article -->
 
     <!-- https://api.dictionaryapi.dev/api/v2/entries/en/keyboard -->

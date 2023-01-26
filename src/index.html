@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Frontend Mentor Dictionary Web App Challenge">
+  <meta name="color-scheme" content="dark">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="stylesheets/main.scss">
@@ -13,12 +14,28 @@
   <title>Frontend Mentor | Dictionary web app</title>
 </head>
 
-<body>
+<body class="body theme--default">
   <header class="header">
     <div class="settings">
-      <span class="logo"></span>
+      <span class="logo">
+        <a href="#">
+          <span class="visually-hidden">Dictionary Home</span>
+          <svg class="icon icon-logo" aria-hidden="true">
+            <use href="./assets/icons.svg#logo"></use>
+          </svg>
+        </a>
+      </span>
       <div class="font"></div>
-      <input type="checkbox" name="toggle-dark" id="toggle-dark">
+      <input type="checkbox" class="toggle__checkbox dark-mode__toggle" id="dark-mode__toggle" data-dark-mode-toggle>
+      <div class="toggle">
+        <label class="toggle__slider" for="dark-mode__toggle"></label>
+        <label class="toggle__label" for="dark-mode__toggle">
+          <span class="visually-hidden">Enable Dark Mode</span>
+          <svg class="icon icon-moon" aria-hidden="true">
+            <use href="./assets/icons.svg#icon-moon"></use>
+          </svg>
+        </label>
+      </div>
       <!-- font, theme settings -->
     </div>
     <div class="search">
@@ -29,28 +46,23 @@
   </header>
 
   <main class="main">
-    <p id="result-word">Keyboard</p>
-    <p id="result-pronunciation">/ˈkiːbɔːd/</p>
-    <figure>
-      <figcaption>Listen to the pronunciation</figcaption>
-      <audio id="result-audio" controls src="https://api.dictionaryapi.dev/media/pronunciations/en/keyboard-us.mp3">
-      </audio>
-    </figure>
-    <!-- word -->
-    <!-- phonetic -->
-    <!-- audio -->
 
-    <!-- article -->
+    <section data-keyword class="keyword">
+      <h1 data-keyword--term class="keyword__word">_</h1>
+      <p data-keyword--pronunciation class="keyword__pronunciation"></p>
+      <figure class="keyword__audio">
+        <figcaption class="visually-hidden">Listen to the pronunciation</figcaption>
+        <audio data-keyword--audio controls>
+        </audio>
+      </figure>
+    </section>
 
-    <!-- https://api.dictionaryapi.dev/api/v2/entries/en/keyboard -->
+    <section data-definitions class="definitions"></section>
+    <!--
     <div id="search-result"></div>
+    -->
 
   </main>
-
-  <footer class="footer">
-    <!-- source wiktionary... -->
-
-  </footer>
 
 </body>
 

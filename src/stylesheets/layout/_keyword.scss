@@ -1,0 +1,12 @@
+.keyword {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-auto-flow: row;
+  grid-template-rows: auto 1fr;
+}
+.keyword__audio {
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+  margin: 0;
+}

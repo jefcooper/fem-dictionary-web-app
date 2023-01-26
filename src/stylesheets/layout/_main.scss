@@ -1,3 +1,9 @@
+@use "../abstracts/mixins";
+
+.main {
+  @include mixins.container;
+}
+
 #search-result {
   font-family: monospace;
   font-size: 1rem;

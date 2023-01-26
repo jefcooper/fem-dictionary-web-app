@@ -1,0 +1,8 @@
+@use "../abstracts/mixins";
+
+.header {
+  @include mixins.container;
+}
+.settings {
+  align-items: center;
+}

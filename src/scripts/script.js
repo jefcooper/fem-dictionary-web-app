@@ -1,3 +1,4 @@
+import "./font-theme";
 import "./prefersColorScheme";
 
 import dictionarySearch from "./dictionaryapi.js";

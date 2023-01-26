@@ -14,7 +14,7 @@
   <title>Frontend Mentor | Dictionary web app</title>
 </head>
 
-<body class="body theme--default">
+<body class="body theme--default theme--mono">
   <header class="header">
     <div class="settings">
       <span class="logo">
@@ -25,7 +25,11 @@
           </svg>
         </a>
       </span>
-      <div class="font"></div>
+      <select id="font-theme-select" data-font-theme>
+        <option value="sans-serif">Sans Serif</option>
+        <option value="serif">Serif</option>
+        <option value="mono">Mono</option>
+      </select>
       <input type="checkbox" class="toggle__checkbox dark-mode__toggle" id="dark-mode__toggle" data-dark-mode-toggle>
       <div class="toggle">
         <label class="toggle__slider" for="dark-mode__toggle"></label>

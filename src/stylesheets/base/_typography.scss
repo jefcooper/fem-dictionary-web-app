@@ -1,14 +1,67 @@
 /*******************************************************************************
  * Typography
  *
- *  heading--1
- *  heading--2
- *  heading--3
+ * 14 Reg (all) - Reg used for source across mobile, tablet, desktop
+ * 14 Bold - used for font dropdown on mobile
+ * 15 Reg (all)
+ * 15 Bold Inter
+ * 16 Reg / Bold (all)
+ * 18 Reg / Bold (all)
+ * 20 Reg / Bold (all)
+ * 24 Reg / Bold (all)
+ * 32 Bold (all)
+ * 64 Bold (all)
+ * 64 Reg Roboto
  *
- *  text--1
- *  text--2
+ * Desktop / Tablet
+ * 14 (source)
+ * 18 (body)
+ * 20
+ * 24
+ * 64
+ * 
+ * Mobile
+ * 14
+ * 15 (body)
+ * 16
+ * 18
+ * 32
+ * 
+ *
+ *  keyword 32 Bold (mobile), 64 Bold (tablet/desktop) - keyword title
+ *  pronunciation 18 Reg (mobile), 24 Reg (tablet/desktop) Inter regardless of theme
+
+ *  part-of-speech (mobile)
+ *    sans-serif: Inter, 700, 18px, italic
+ *    serif:      Lora, 700, 18px, italic
+ *    mono:       Inconsolata, 700, 18px, normal
+ *
+ *  part-of-speech (tablet/desktop)
+ *    sans-serif: Inter, 700, 24px, italic
+ *    serif:      Inter, 400, 24px, normal
+ *    mono:       Inconsolata, 700, 24px, normal
+ *
+ *  Meaning / Synonyms, 
+ *    (mobile) 400, 16px, normal (Inter, Lora, Inconsolata)
+ *    (tablet, desktop) 400, 20px, normal (Inter, Lora, Inconsolata)
+ *
+ *  Body,
+ *    (mobile) 400, 15px/24px, normal (Inter, Lora, Inconsolata)
+ *    (tablet, desktop) 400, 18px/24px, normal (Inter, Lora, Inconsolata)
+ *
+ *  Synonym Body,
+ *    (mobile) 700, 16px, normal (Inter, Lora, Inconsolata)
+ *
+ * components
+ * 
+ *  dropdown, 14 Bold (mobile), 18 Bold (tablet/desktop)
+ *  search, 16 Bold (mobile), 20 Bold (tablet/desktop)
  *
  *******************************************************************************/
+
+$ff-sans-serif: "Inter, sans-serif";
+$ff-serif: "Lora, serif";
+$ff-mono: "Inconsolata, mono";
 
 @mixin heading--sans-serif {
   font-family: Inter, sans-serif;

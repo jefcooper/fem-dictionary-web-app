@@ -134,14 +134,18 @@ function fillDefinitions(data) {
       .addTo(definitions);
     for (const url of result.sourceUrls) {
       const sourceItem = new ElementFactory("li")
-        .text(url)
         .class("definition__source-url")
         .addTo(defnSourceList);
-      new ElementFactory("a")
+      const ahref = new ElementFactory("a")
         .attribute("href", url)
         .attribute("target", "_blank")
-        .text("X")
         .addTo(sourceItem);
+      new ElementFactory("span").text(url).addTo(ahref);
+      new ElementFactory("img")
+        .class("icon")
+        .class("icon-new-window")
+        .attribute("src", "assets/icon-new-window.svg")
+        .addTo(ahref);
     }
   }
 }

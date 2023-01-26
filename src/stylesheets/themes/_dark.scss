@@ -1,19 +1,28 @@
 @use "sass:color";
 @use "colors";
+@use "light";
 
 @mixin theme--dark {
+  @include light.theme--light;
   --theme-bg: #{colors.$clr-neutral-800};
   --theme-clr: #{colors.$clr-neutral-100};
 
   // toggle
   --theme-toggle-bg: linear-gradient(
     135deg,
-    #{colors.$clr-neutral-300},
-    #{colors.$clr-neutral-300}
+    #{colors.$clr-accent-300},
+    #{colors.$clr-accent-300}
   );
-  --theme-toggle-clr: #{colors.$clr-neutral-600};
+  --theme-toggle-bg-hover: linear-gradient(
+    135deg,
+    #{colors.$clr-accent-300},
+    #{colors.$clr-accent-300}
+  );
+  --theme-toggle-clr: #{colors.$clr-neutral-50};
   --theme-toggle-focus: #{colors.$clr-accent-300};
   --theme-toggle-label: #{colors.$clr-neutral-400};
+
+  --theme-search-bg: #{colors.$clr-neutral-700};
 }
 
 .theme--dark {

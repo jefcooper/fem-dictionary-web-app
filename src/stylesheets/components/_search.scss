@@ -5,12 +5,18 @@
 }
 
 .search__input {
-  padding-block: 0.5rem;
-  padding-inline: 0.5rem;
+  padding-block: 1.25rem;
+  padding-inline: 1.5rem;
+  border-radius: 1rem;
+  border: 0;
+  background-color: var(--theme-search-bg);
 }
 
 .search__label {
   position: absolute;
+  display: grid;
+  place-items: center;
   top: 0;
-  right: 0;
+  bottom: 0;
+  right: 0.5rem;
 }

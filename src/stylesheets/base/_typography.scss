@@ -1,0 +1,26 @@
+/*******************************************************************************
+ * Typography
+ *
+ *  heading--1
+ *  heading--2
+ *  heading--3
+ *
+ *  text--1
+ *  text--2
+ *
+ *******************************************************************************/
+
+@mixin heading--sans-serif {
+  font-family: Inter, sans-serif;
+}
+@mixin heading--1 {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.heading--1 {
+  @include heading--sans-serif;
+  @include heading--1;
+}

@@ -139,6 +139,7 @@ function fillDefinitions(data) {
         .addTo(defnSourceList);
       new ElementFactory("a")
         .attribute("href", url)
+        .attribute("target", "_blank")
         .text("X")
         .addTo(sourceItem);
     }

@@ -145,6 +145,7 @@ function fillDefinitions(data) {
         .class("icon")
         .class("icon-new-window")
         .attribute("src", "assets/icon-new-window.svg")
+        .attribute("aria-hidden", "true")
         .addTo(ahref);
     }
   }

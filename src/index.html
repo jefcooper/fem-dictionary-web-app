@@ -40,8 +40,16 @@
     </div>
     <div class="search">
       <!-- search -->
-      <input type="text" name="search-term" id="search-term">
-      <button type="button" class="btn" id="search-button">Search</button>
+      <input placeholder="Search for any word..." type="text" class="search__input" id="search-term">
+      <label class="search__label">
+        <span class="visually-hidden">Enter word to lookup</span>
+        <button type="button" class="btn btn--icon" id="search-button">
+          <span class="visually-hidden">Search</span>
+          <svg class="icon icon-search">
+            <use href="assets/icons.svg#icon-search"></use>
+          </svg>
+        </button>
+      </label>
     </div>
   </header>
 

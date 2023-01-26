@@ -1,0 +1,16 @@
+.search {
+  position: relative;
+  display: grid;
+  margin-top: 3.25rem;
+}
+
+.search__input {
+  padding-block: 0.5rem;
+  padding-inline: 0.5rem;
+}
+
+.search__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

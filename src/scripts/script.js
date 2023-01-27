@@ -38,7 +38,7 @@ function fillKeyword(data) {
     return e.audio;
   });
   const audioEl = document.querySelector("[data-keyword--audio]");
-  audioEl?.setAttribute("src", audioUrl.audio);
+  audioEl?.setAttribute("src", audioUrl?.audio);
 }
 
 function fillDefinitions(data) {

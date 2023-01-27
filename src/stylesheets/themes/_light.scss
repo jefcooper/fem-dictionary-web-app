@@ -4,6 +4,7 @@
 @mixin theme--light {
   --theme-bg: #{colors.$clr-neutral-50};
   --theme-clr: #{colors.$clr-neutral-800};
+  --theme-clr-accent: #{colors.$clr-accent-300};
 
   --theme-toggle-bg: linear-gradient(
     135deg,

@@ -8,12 +8,20 @@ import element from "./element-factory";
 const searchButton = document.getElementById("search-button");
 const searchTerm = document.getElementById("search-term");
 
-searchButton.addEventListener("click", (evt) => {
+searchButton.addEventListener("click", search);
+
+// if enter key on searchTerm, then also search
+searchTerm.addEventListener(
+  "keydown",
+  (evt) => evt.key === "Enter" && search()
+);
+
+function search() {
   dictionarySearch(searchTerm.value).then((result) => {
     fillKeyword(result[0]);
     fillDefinitions(result);
   });
-});
+}
 
 function fillKeyword(data) {
   // data-keyword, data-pronunciation, data-audio

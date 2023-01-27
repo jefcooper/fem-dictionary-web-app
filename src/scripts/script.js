@@ -42,10 +42,12 @@ function fillDefinitions(data) {
       element("h2")
         .text(partOfSpeech.partOfSpeech)
         .class("definition__part-of-speech")
+        .class("heading--2")
         .addTo(definitions);
       element("h3")
         .text("Meaning")
         .class("definition__meaning-label")
+        .class("heading--3")
         .addTo(definitions);
       const ulEl = element("ul").addTo(definitions);
 
@@ -54,6 +56,7 @@ function fillDefinitions(data) {
         const defnTextEl = element("p")
           .text(defn.definition)
           .class("definition__text")
+          .class("text--1")
           .addTo(liEl);
         if (defn.example) {
           element("p")
@@ -94,6 +97,7 @@ function fillDefinitions(data) {
         element("h3")
           .text("Synonyms")
           .class("definition__synonym-label")
+          .class("heading--3")
           .addTo(definitions);
         const synUlEl = element("ul")
           .class("definition__synonym-list")
@@ -107,6 +111,7 @@ function fillDefinitions(data) {
         element("h3")
           .text("Antonyms")
           .class("definition__antonym-label")
+          .class("heading--3")
           .addTo(definitions);
         const antUlEl = element("ul")
           .class("definition__antonym-list")

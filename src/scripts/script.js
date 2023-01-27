@@ -1,3 +1,4 @@
+import newWindowIcon from "../assets/icon-new-window.svg";
 import "./font-theme";
 import "./prefersColorScheme";
 
@@ -141,7 +142,7 @@ function fillDefinitions(data) {
       element("img")
         .class("icon")
         .class("icon-new-window")
-        .attribute("src", "/assets/icon-new-window.svg")
+        .attribute("src", newWindowIcon)
         .attribute("aria-hidden", "true")
         .addTo(ahref);
     }

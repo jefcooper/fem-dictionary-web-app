@@ -6,7 +6,7 @@
  * const el = new ElementFactory('div');
  * el.text('foo').class('green').attribute('data-foo');
  */
-export default class ElementFactory {
+class ElementFactory {
   constructor(tag) {
     this.el = document.createElement(tag);
   }
@@ -31,3 +31,9 @@ export default class ElementFactory {
     return this.el;
   }
 }
+
+const element = (tag) => {
+  return new ElementFactory(tag);
+};
+
+export default element;

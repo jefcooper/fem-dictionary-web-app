@@ -2,7 +2,7 @@ import "./font-theme";
 import "./prefersColorScheme";
 
 import dictionarySearch from "./dictionaryapi.js";
-import ElementFactory from "./element-factory.js";
+import element from "./element-factory";
 
 const searchButton = document.getElementById("search-button");
 const searchTerm = document.getElementById("search-term");
@@ -39,110 +39,101 @@ function fillDefinitions(data) {
 
   for (const result of data) {
     for (const partOfSpeech of result.meanings) {
-      new ElementFactory("h2")
+      element("h2")
         .text(partOfSpeech.partOfSpeech)
         .class("definition__part-of-speech")
         .addTo(definitions);
-      new ElementFactory("h3")
+      element("h3")
         .text("Meaning")
         .class("definition__meaning-label")
         .addTo(definitions);
-      const ulEl = new ElementFactory("ul").addTo(definitions);
+      const ulEl = element("ul").addTo(definitions);
 
       for (const defn of partOfSpeech.definitions) {
-        const liEl = new ElementFactory("li").addTo(ulEl);
-        const defnTextEl = new ElementFactory("p")
+        const liEl = element("li").addTo(ulEl);
+        const defnTextEl = element("p")
           .text(defn.definition)
           .class("definition__text")
           .addTo(liEl);
         if (defn.example) {
-          new ElementFactory("p")
+          element("p")
             .text(defn.example)
             .class("definition__example")
             .addTo(liEl);
         }
 
         if (defn.synonyms.length) {
-          new ElementFactory("h4")
+          element("h4")
             .text("Synonyms")
             .class("definition__synonym-label")
             .addTo(liEl);
-          const defnSynUlEl = new ElementFactory("ul")
+          const defnSynUlEl = element("ul")
             .class("definition__synonym-list")
             .addTo(liEl);
           for (const syn of defn.synonyms) {
-            new ElementFactory("li")
+            element("li")
               .class("definition__synonym")
               .text(syn)
               .addTo(defnSynUlEl);
           }
         }
         if (defn.antonyms.length) {
-          new ElementFactory("h4")
+          element("h4")
             .text("Antonyms")
             .class("definition__antonym-label")
             .addTo(liEl);
-          const defnAntUlEl = new ElementFactory("ul")
+          const defnAntUlEl = element("ul")
             .class("definition__antonym-list")
             .addTo(liEl);
           for (const ant of defn.antonyms) {
-            new ElementFactory("li")
-              .class("definition__antonym")
-              .text(ant)
-              .addTo(liEl);
+            element("li").class("definition__antonym").text(ant).addTo(liEl);
           }
         }
       }
       if (partOfSpeech.synonyms.length) {
-        new ElementFactory("h3")
+        element("h3")
           .text("Synonyms")
           .class("definition__synonym-label")
           .addTo(definitions);
-        const synUlEl = new ElementFactory("ul")
+        const synUlEl = element("ul")
           .class("definition__synonym-list")
           .addTo(definitions);
 
         for (const syn of partOfSpeech.synonyms) {
-          new ElementFactory("li")
-            .text(syn)
-            .class("definition__synonym")
-            .addTo(synUlEl);
+          element("li").text(syn).class("definition__synonym").addTo(synUlEl);
         }
       }
       if (partOfSpeech.antonyms.length) {
-        new ElementFactory("h3")
+        element("h3")
           .text("Antonyms")
           .class("definition__antonym-label")
           .addTo(definitions);
-        const antUlEl = new ElementFactory("ul")
+        const antUlEl = element("ul")
           .class("definition__antonym-list")
           .addTo(definitions);
 
         for (const ant of partOfSpeech.antonyms) {
-          new ElementFactory("li")
-            .text(ant)
-            .class("definition__antonym")
-            .addTo(antUlEl);
+          element("li").text(ant).class("definition__antonym").addTo(antUlEl);
         }
       }
     }
-    new ElementFactory("h4")
+    element("h4")
       .text("Source")
       .class("definition__source-label")
       .addTo(definitions);
-    const defnSourceList = new ElementFactory("ul")
+    const defnSourceList = element("ul")
       .class("definition__source-list")
       .addTo(definitions);
     for (const url of result.sourceUrls) {
-      const sourceItem = new ElementFactory("li")
+      const sourceItem = element("li")
         .class("definition__source-url")
         .addTo(defnSourceList);
-      const ahref = new ElementFactory("a")
+      const ahref = element("a")
         .attribute("href", url)
         .attribute("target", "_blank")
         .addTo(sourceItem);
-      new ElementFactory("span").text(url).addTo(ahref);
-      new ElementFactory("img")
+      element("span").text(url).addTo(ahref);
+      element("img")
         .class("icon")
         .class("icon-new-window")
         .attribute("src", "assets/icon-new-window.svg")

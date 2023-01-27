@@ -7,7 +7,7 @@
   <meta name="description" content="Frontend Mentor Dictionary Web App Challenge">
   <meta name="color-scheme" content="dark">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="stylesheets/main.scss">
   <script src="scripts/script.js" type="module"></script>
 
@@ -60,12 +60,18 @@
   <main class="main">
 
     <section data-keyword class="keyword">
-      <h1 data-keyword--term class="keyword__word heading--1"></h1>
-      <p data-keyword--pronunciation class="keyword__pronunciation text--2"></p>
+      <h1 data-keyword__term class="keyword__word heading--1"></h1>
+      <p data-keyword__pronunciation class="keyword__pronunciation text--2"></p>
       <figure class="keyword__audio">
         <figcaption class="visually-hidden">Listen to the pronunciation</figcaption>
-        <audio data-keyword--audio controls>
+        <audio data-keyword__audio>
         </audio>
+        <button type="button" class="keyword__audio-play btn btn--icon" data-keyword__play>
+          <span class="visually-hidden">Play keyword pronunciation</span>
+          <svg class="icon icon-play">
+            <use href="assets/icons.svg#icon-play"></use>
+          </svg>
+        </button>
       </figure>
     </section>
 

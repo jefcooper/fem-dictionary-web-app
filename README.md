@@ -47,6 +47,14 @@ Users should be able to:
 - Github Pages
 - npm / vite
 
+### To Do
+
+- styling of select dropdown for font style change
+- hover on moon
+- search typography
+- vertical spacing
+- audio play button
+
 ### What I learned
 
 ### Bugs and Finishing Steps

@@ -7,6 +7,7 @@ import element from "./element-factory";
 
 const searchButton = document.getElementById("search-button");
 const searchTerm = document.getElementById("search-term");
+const keywordPlayButton = document.querySelector("[data-keyword__play]");
 
 searchButton.addEventListener("click", search);
 
@@ -15,6 +16,11 @@ searchTerm.addEventListener(
   "keydown",
   (evt) => evt.key === "Enter" && search()
 );
+
+keywordPlayButton.addEventListener("click", (evt) => {
+  const audioEl = document.querySelector("[data-keyword__audio]");
+  audioEl.play();
+});
 
 function search() {
   dictionarySearch(searchTerm.value).then((result) => {
@@ -25,11 +31,11 @@ function search() {
 
 function fillKeyword(data) {
   // data-keyword, data-pronunciation, data-audio
-  const termEl = document.querySelector("[data-keyword--term]");
+  const termEl = document.querySelector("[data-keyword__term]");
   termEl.innerText = data.word;
 
   const pronunciationEl = document.querySelector(
-    "[data-keyword--pronunciation]"
+    "[data-keyword__pronunciation]"
   );
   pronunciationEl.innerText = data.phonetic;
 
@@ -37,7 +43,7 @@ function fillKeyword(data) {
   let audioUrl = data.phonetics.find((e) => {
     return e.audio;
   });
-  const audioEl = document.querySelector("[data-keyword--audio]");
+  const audioEl = document.querySelector("[data-keyword__audio]");
   audioEl?.setAttribute("src", audioUrl?.audio);
 }
 

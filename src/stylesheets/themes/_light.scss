@@ -6,6 +6,11 @@
   --theme-clr: #{colors.$clr-neutral-800};
   --theme-clr-accent: #{colors.$clr-accent-300};
 
+  --theme-play-highlight: #{colors.$clr-neutral-50};
+  --theme-play-hover: #{colors.$clr-accent-300};
+  --theme-play-clr: #{colors.$clr-accent-300};
+  --theme-play-bg: #{color.change(colors.$clr-accent-300, $alpha: 0.25)};
+
   --theme-toggle-bg: linear-gradient(
     135deg,
     #{colors.$clr-neutral-400},

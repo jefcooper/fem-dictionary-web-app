@@ -13,3 +13,12 @@
 .keyword__pronunciation {
   color: var(--theme-clr-accent);
 }
+
+.icon-play {
+  fill: var(--theme-play-bg);
+  color: var(--theme-play-clr);
+}
+.icon-play:hover {
+  fill: var(--theme-play-hover);
+  color: var(--theme-play-highlight);
+}

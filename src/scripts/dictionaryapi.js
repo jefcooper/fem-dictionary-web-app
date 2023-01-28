@@ -11,7 +11,13 @@ async function dictionarySearch(term) {
   const response = await fetch(
     "https://api.dictionaryapi.dev/api/v2/entries/en/" + term
   );
-  return await response.json();
+  if (response.status !== 200) {
+    const result = await response.json();
+    result.error = response.status;
+    return result;
+  } else {
+    return await response.json();
+  }
 }
 
 export default dictionarySearch;

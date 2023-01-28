@@ -57,7 +57,7 @@
     </div>
   </header>
 
-  <main class="main">
+  <main class="main" data-state>
 
     <section data-keyword class="keyword">
       <h1 data-keyword__term class="keyword__word heading--1"></h1>
@@ -66,13 +66,19 @@
         <figcaption class="visually-hidden">Listen to the pronunciation</figcaption>
         <audio data-keyword__audio>
         </audio>
-        <button type="button" class="keyword__audio-play btn btn--icon" data-keyword__play>
+        <button type="button" class="btn btn--icon keyword__audio-play" data-keyword__play>
           <span class="visually-hidden">Play keyword pronunciation</span>
           <svg class="icon icon-play">
             <use href="assets/icons.svg#icon-play"></use>
           </svg>
         </button>
       </figure>
+    </section>
+
+    <section class="error heading--1">
+      <p>😕</p>
+      <h1 class="heading--1" data-error-title></h1>
+      <p class="text--1" data-error-message></p>
     </section>
 
     <section data-definitions class="definitions"></section>

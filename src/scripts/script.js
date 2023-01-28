@@ -24,9 +24,34 @@ keywordPlayButton.addEventListener("click", (evt) => {
 
 function search() {
   dictionarySearch(searchTerm.value).then((result) => {
-    fillKeyword(result[0]);
-    fillDefinitions(result);
+    if (result.error) {
+      setDataState("error");
+      fillError(result);
+    } else {
+      setDataState("keyword");
+      fillKeyword(result[0]);
+      fillDefinitions(result);
+    }
   });
+}
+
+function setDataState(state) {
+  const dataStateEl = document.querySelector("[data-state]");
+  if (state) {
+    dataStateEl.setAttribute("data-state", state);
+  } else {
+    dataStateEl.setAttribute("data-state", "");
+  }
+}
+
+function fillError(data) {
+  console.log(JSON.stringify(data));
+  const definitions = document.querySelector("[data-definitions]");
+  definitions.innerText = "";
+  const title = document.querySelector("[data-error-title]");
+  title.innerText = data.title;
+  const message = document.querySelector("[data-error-message]");
+  message.innerText = data.message;
 }
 
 function fillKeyword(data) {

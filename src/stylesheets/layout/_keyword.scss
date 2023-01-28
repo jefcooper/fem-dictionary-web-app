@@ -1,14 +1,20 @@
 .keyword {
-  display: grid;
+  display: none;
   justify-content: space-between;
   align-items: center;
   grid-auto-flow: row;
   grid-template-rows: auto 1fr;
 }
+.main[data-state="keyword"] .keyword {
+  display: grid;
+}
 .keyword__audio {
   grid-column: 2 / 3;
   grid-row: 1 / -1;
   margin: 0;
+}
+.keyword .btn {
+  padding: 0;
 }
 .keyword__pronunciation {
   color: var(--theme-clr-accent);
@@ -21,4 +27,9 @@
 .icon-play:hover {
   fill: var(--theme-play-hover);
   color: var(--theme-play-highlight);
+}
+
+/* hide the play button when no src is available */
+audio:not([src]) ~ .keyword__audio-play {
+  display: none;
 }

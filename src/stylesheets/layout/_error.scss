@@ -1,0 +1,6 @@
+.error {
+  display: none;
+}
+.main[data-state="error"] .error {
+  display: grid;
+}

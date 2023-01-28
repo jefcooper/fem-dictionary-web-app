@@ -49,10 +49,14 @@ Users should be able to:
 
 ### To Do
 
+- ~~render error text~~
+- style error section
 - styling of select dropdown for font style change
-- ~~hover on moon~~
 - search typography
 - vertical spacing
+- ~~handle 404 error state~~
+- ~~hide play button when no selection~~
+- ~~hover on moon~~
 - ~~audio play button~~
 
 ### What I learned

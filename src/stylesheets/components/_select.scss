@@ -1,0 +1,45 @@
+/* hide the native select since we'll replace the visual elements */
+.select select {
+  display: none;
+}
+.select__control {
+  position: relative;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  justify-content: start;
+  grid-auto-flow: column;
+  gap: 0.5em;
+  width: 100%;
+  min-width: 10ch;
+  max-width: 15ch;
+  padding-block: 0.5em;
+  padding-inline: 0.75em;
+  text-transform: capitalize;
+  user-select: none;
+  cursor: pointer;
+}
+
+.select__popup {
+  position: absolute;
+  background-color: white;
+  z-index: 2;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: 0px 5px 30px hsl(0 0% 0% / 10%);
+}
+.select__control[aria-expanded="false"] ~ .select__popup {
+  display: none;
+}
+
+.select__popup ul {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+.select__popup li {
+  text-transform: capitalize;
+}

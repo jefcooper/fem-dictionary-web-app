@@ -26,6 +26,10 @@
   --theme-toggle-label: #{colors.$clr-neutral-400};
 
   --theme-search-bg: #{colors.$clr-neutral-100};
+
+  --theme-select-border: #{colors.$clr-neutral-300};
+  --theme-select-arrow: #{colors.$clr-accent-300};
+  --theme-select-focus: #{colors.$clr-accent-300};
 }
 
 .theme--light {

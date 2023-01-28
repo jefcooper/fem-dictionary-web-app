@@ -49,11 +49,11 @@ Users should be able to:
 
 ### To Do
 
-- ~~render error text~~
-- style error section
 - styling of select dropdown for font style change
+- style error section
 - search typography
 - vertical spacing
+- ~~render error text~~
 - ~~handle 404 error state~~
 - ~~hide play button when no selection~~
 - ~~hover on moon~~
@@ -68,6 +68,7 @@ Users should be able to:
 - Wikimedia API https://www.mediawiki.org/wiki/API:Main_page
 - https://dictionaryapi.dev/
 - https://api.dictionaryapi.dev/api/v2/entries/en/cat
+- https://moderncss.dev/custom-select-styles-with-pure-css/
 
 #### Tooling
 

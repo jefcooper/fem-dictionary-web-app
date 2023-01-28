@@ -25,11 +25,15 @@
           </svg>
         </a>
       </span>
-      <select id="font-theme-select" data-font-theme>
-        <option value="sans-serif">Sans Serif</option>
-        <option value="serif">Serif</option>
-        <option value="mono">Mono</option>
-      </select>
+      <label class="visually-hidden" for="font-theme-select">Select Font Style</label>
+      <div class="select" data-select>
+        <select id="font-theme-select" data-font-theme>
+          <option value="Sans Serif">Sans Serif</option>
+          <option value="Serif">Serif</option>
+          <option value="Mono">Mono</option>
+        </select>
+        <span class="select__focus"></span>
+      </div>
       <input type="checkbox" class="toggle__checkbox dark-mode__toggle" id="dark-mode__toggle" data-dark-mode-toggle>
       <div class="toggle">
         <label class="toggle__slider" for="dark-mode__toggle"></label>

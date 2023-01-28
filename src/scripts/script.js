@@ -1,6 +1,7 @@
 import newWindowIcon from "../assets/icon-new-window.svg";
 import "./font-theme";
 import "./prefersColorScheme";
+import "./select";
 
 import dictionarySearch from "./dictionaryapi.js";
 import element from "./element-factory";

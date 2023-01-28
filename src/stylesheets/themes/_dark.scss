@@ -23,6 +23,8 @@
   --theme-toggle-label: #{colors.$clr-neutral-400};
 
   --theme-search-bg: #{colors.$clr-neutral-700};
+  --theme-select-popup: #{colors.$clr-neutral-700};
+  --theme-select-shadow: 0px 5px 30px #{colors.$clr-accent-400};
 }
 
 .theme--dark {

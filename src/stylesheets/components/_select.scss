@@ -31,10 +31,13 @@
   width: 9.5rem;
   padding: 1.5rem;
 
-  background-color: var(--theme-bg);
+  background-color: var(--theme-select-popup);
   user-select: none;
   cursor: pointer;
+  /*
   box-shadow: 0px 5px 30px hsl(0 0% 0% / 10%);
+  */
+  box-shadow: var(--theme-select-shadow);
 }
 .select__control[aria-expanded="false"] ~ .select__popup {
   display: none;

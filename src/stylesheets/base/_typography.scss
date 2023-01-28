@@ -141,6 +141,18 @@ $ff-mono: "Inconsolata, mono";
   font-weight: 700;
 }
 
+.text--serif {
+  font-family: "Lora", serif;
+}
+
+.text--sans-serif {
+  font-family: "Inter", sans-serif;
+}
+
+.text--mono {
+  font-family: "Inconsolata", monospace;
+}
+
 /*  dropdown__text--1: dropdown, 14 Bold (mobile), 18 Bold (tablet/desktop)
  */
 .dropdown__text--1 {

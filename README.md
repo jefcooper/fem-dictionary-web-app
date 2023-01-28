@@ -49,10 +49,10 @@ Users should be able to:
 
 ### To Do
 
-- styling of select dropdown for font style change
 - style error section
 - search typography
 - vertical spacing
+- ~~styling of select dropdown for font style change~~
 - ~~render error text~~
 - ~~handle 404 error state~~
 - ~~hide play button when no selection~~

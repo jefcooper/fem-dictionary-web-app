@@ -80,6 +80,7 @@ function createSelectBox(parentDiv) {
   const divEl = element("div")
     .class("select__control")
     .attribute("aria-expanded", "false")
+    .attribute("tabindex", 0)
     .addTo(parentDiv);
   element("span").text(selectEl.value).addTo(divEl);
   element("img")
@@ -99,12 +100,31 @@ function createSelectBox(parentDiv) {
     evt.preventDefault();
     evt.stopPropagation();
   });
+  divEl.addEventListener("keydown", (evt) => {
+    console.log(evt.key);
+    if (evt.key === "Enter" || evt.key === " " || evt.key === "Escape") {
+      const expanded = divEl.getAttribute("aria-expanded") === "true";
+      if (expanded) {
+        divEl.setAttribute("aria-expanded", "false");
+      } else {
+        if (evt.key !== "Escape") {
+          divEl.setAttribute("aria-expanded", "true");
+        }
+      }
+      evt.preventDefault();
+      evt.stopPropagation();
+    }
+  });
   const popupDiv = element("div").class("select__popup").addTo(parentDiv);
   const options = selectOptions(selectEl);
 
   const optionList = element("ul").addTo(popupDiv);
   options.forEach((opt) => {
-    const liEl = element("li").text(opt.value).addTo(optionList);
+    const className = "text--" + opt.value.replaceAll(" ", "-").toLowerCase();
+    const liEl = element("li")
+      .text(opt.value)
+      .class(className)
+      .addTo(optionList);
     liEl.addEventListener("click", (evt) => {
       console.log("click, option: " + liEl.innerText);
       divEl.children[0].innerText = liEl.innerText;

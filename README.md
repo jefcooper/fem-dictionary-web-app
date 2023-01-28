@@ -50,10 +50,10 @@ Users should be able to:
 ### To Do
 
 - styling of select dropdown for font style change
-- hover on moon
+- ~~hover on moon~~
 - search typography
 - vertical spacing
-- audio play button
+- ~~audio play button~~
 
 ### What I learned
 

@@ -45,6 +45,9 @@
  *    (mobile) 400, 16px, normal (Inter, Lora, Inconsolata)
  *    (tablet, desktop) 400, 20px, normal (Inter, Lora, Inconsolata)
  *
+ *  heading--4: No Definitions Found
+ *    (all) 700, 20px, normal (...)
+ *
  *  text--1: Body,
  *    (mobile) 400, 15px/24px, normal (Inter, Lora, Inconsolata)
  *    (tablet, desktop) 400, 18px/24px, normal (Inter, Lora, Inconsolata)
@@ -112,6 +115,16 @@ $ff-mono: "Inconsolata, mono";
   @include font-base;
 }
 
+/* heading--4: No Definitions Found
+ * 700, 20px, normal (all)
+ */
+.heading--4 {
+  @include font-base;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
 /*  text--1: Body,
  *    (mobile) 400, 15px/24px, normal (Inter, Lora, Inconsolata)
  *    (tablet, desktop) 400, 18px/24px, normal (Inter, Lora, Inconsolata)
@@ -168,6 +181,10 @@ $ff-mono: "Inconsolata, mono";
 /*  search__text--1: search, 16 Bold (mobile), 20 Bold (tablet/desktop)
  */
 .search__text--1 {
+}
+
+.text--center {
+  text-align: center;
 }
 
 /*----------------------------------------------------------------------------

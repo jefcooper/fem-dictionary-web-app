@@ -2,6 +2,7 @@
 
 .header {
   @include mixins.container;
+  padding-inline: 1.5rem;
 }
 .settings {
   align-items: center;

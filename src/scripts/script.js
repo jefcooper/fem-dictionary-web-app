@@ -90,7 +90,9 @@ function fillDefinitions(data) {
         .class("definition__meaning-label")
         .class("heading--3")
         .addTo(definitions);
-      const ulEl = element("ul").addTo(definitions);
+      const ulEl = element("ul")
+        .class("definition__meaning-list")
+        .addTo(definitions);
 
       for (const defn of partOfSpeech.definitions) {
         const liEl = element("li").addTo(ulEl);

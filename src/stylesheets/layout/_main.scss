@@ -2,6 +2,7 @@
 
 .main {
   @include mixins.container;
+  padding-inline: 1.5rem;
 }
 
 #search-result {

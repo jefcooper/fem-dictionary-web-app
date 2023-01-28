@@ -5,3 +5,42 @@
   align-items: center;
   gap: 0.5rem;
 }
+
+.definitions {
+}
+.definition__part-of-speech {
+  margin-top: 2rem;
+}
+
+.definition__meaning-label {
+  margin-top: 2rem;
+}
+.definition__meaning-list {
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+.definition__meaning-list li {
+  position: relative;
+  list-style: none;
+}
+
+.definition__meaning-list li::before {
+  position: absolute;
+  display: inline-block;
+  content: "\2022";
+  color: var(--theme-clr-accent);
+  font-weight: 700;
+  width: 1em;
+  margin-top: 0.3em;
+  margin-left: -1em;
+}
+.definition__meaning-list li + li {
+  margin-top: 0.8125rem;
+}
+
+.definition__synonym-label {
+  margin-top: 2rem;
+}
+.definition__antonym-label {
+  margin-top: 2rem;
+}

@@ -49,9 +49,10 @@ Users should be able to:
 
 ### To Do
 
-- style error section
+- font dropdown keyboard navigation
 - search typography
 - vertical spacing
+- ~~style error section~~
 - ~~styling of select dropdown for font style change~~
 - ~~render error text~~
 - ~~handle 404 error state~~

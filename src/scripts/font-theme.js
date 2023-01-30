@@ -30,6 +30,5 @@ const fontThemeSelect = document.querySelector("[data-font-theme]");
 fontThemeSelect.value = initialTheme;
 
 fontThemeSelect.addEventListener("change", (evt) => {
-  console.log("change theme: " + evt.target.value);
   setFontTheme(evt.target.value);
 });

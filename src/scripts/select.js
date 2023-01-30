@@ -18,7 +18,7 @@ const allSelectElements = Array.from(
 );
 
 allSelectElements.forEach(debugLog);
-allSelectElements.forEach(watchState);
+//allSelectElements.forEach(watchState);
 allSelectElements.forEach(createSelectBox);
 
 document.addEventListener("click", (evt) => {
@@ -39,13 +39,9 @@ document.addEventListener("click", (evt) => {
  */
 function debugLog(el) {
   const selectEl = selectFromDiv(el);
-  console.log("[data-select]");
-  console.log("current value: " + selectEl.value);
   Array.from(selectEl.children)
     .filter((e) => e.nodeName === "OPTION")
-    .forEach((e) => {
-      console.log("option: " + e.value);
-    });
+    .forEach((e) => {});
 }
 
 /**
@@ -101,7 +97,6 @@ function createSelectBox(parentDiv) {
     evt.stopPropagation();
   });
   divEl.addEventListener("keydown", (evt) => {
-    console.log(evt.key);
     if (evt.key === "Enter" || evt.key === " " || evt.key === "Escape") {
       const expanded = divEl.getAttribute("aria-expanded") === "true";
       if (expanded) {
@@ -126,7 +121,6 @@ function createSelectBox(parentDiv) {
       .class(className)
       .addTo(optionList);
     liEl.addEventListener("click", (evt) => {
-      console.log("click, option: " + liEl.innerText);
       divEl.children[0].innerText = liEl.innerText;
       selectEl.value = liEl.innerText;
       selectEl.dispatchEvent(new Event("change"));

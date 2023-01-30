@@ -1,5 +1,5 @@
 .error {
-  display: none;
+  display: grid;
   margin-top: 8.25rem;
 }
 .error__title {
@@ -7,7 +7,4 @@
 }
 .error__message {
   margin-top: 1.5rem;
-}
-.main[data-state="error"] .error {
-  display: grid;
 }

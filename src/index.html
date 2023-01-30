@@ -61,7 +61,7 @@
     </div>
   </header>
 
-  <main class="main" data-state>
+  <main class="main" data-state aria-live="polite" aria-busy="false">
 
     <section data-keyword class="keyword">
       <h1 data-keyword__term class="keyword__word heading--1"></h1>
@@ -86,6 +86,23 @@
     </section>
 
     <section data-definitions class="definitions"></section>
+
+    <section class="busy">
+      <div class="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
     <!--
     <div id="search-result"></div>
     -->

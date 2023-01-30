@@ -4,6 +4,21 @@
   @include mixins.container;
   padding-inline: 1.5rem;
 }
+.main:not([data-state="busy"]) {
+  .busy {
+    display: none;
+  }
+}
+.main:not([data-state="error"]) {
+  .error {
+    display: none;
+  }
+}
+.main:not([data-state="keyword"]) {
+  .keyword {
+    display: none;
+  }
+}
 
 #search-result {
   font-family: monospace;

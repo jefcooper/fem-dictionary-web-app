@@ -24,6 +24,7 @@ keywordPlayButton.addEventListener("click", (evt) => {
 });
 
 function search() {
+  setDataState("busy");
   dictionarySearch(searchTerm.value).then((result) => {
     if (result.error) {
       setDataState("error");

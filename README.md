@@ -49,9 +49,14 @@ Users should be able to:
 
 ### To Do
 
+- busy spinner or indication
+- part of speech horizontal rule
+- synonyms horizontal list and accent color
 - font dropdown keyboard navigation
 - search typography
 - vertical spacing
+- adjust tablet desktop spacing as necessary
+- animated transitions
 - ~~style error section~~
 - ~~styling of select dropdown for font style change~~
 - ~~render error text~~

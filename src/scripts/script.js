@@ -50,9 +50,9 @@ function fillError(data) {
   const definitions = document.querySelector("[data-definitions]");
   definitions.innerText = "";
   const title = document.querySelector("[data-error-title]");
-  title.innerText = data.title;
+  title.innerText = data?.title;
   const message = document.querySelector("[data-error-message]");
-  message.innerText = data.message;
+  message.innerText = data?.message;
 }
 
 function fillKeyword(data) {

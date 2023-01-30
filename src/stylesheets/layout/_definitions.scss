@@ -39,8 +39,37 @@
 }
 
 .definition__synonym-label {
-  margin-top: 2rem;
+  display: inline-block;
+  padding-top: 2rem;
+  margin-right: 1rem;
+  color: var(--theme-synonym-label);
+}
+.definition__synonym-list {
+  display: inline;
+  padding-left: 0;
+  padding-top: 1rem;
+  list-style: none;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+.definition__synonym {
+  display: inline;
+  color: var(--theme-clr-accent);
+}
+.definition__synonym + .definition__synonym {
+  padding-left: 0.2rem;
+}
+.definition__synonym::after {
+  content: ",";
+}
+.definition__synonym:last-child::after {
+  content: "";
 }
 .definition__antonym-label {
   margin-top: 2rem;
+}
+.definition__source-label {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--theme-horizontal-rule);
 }

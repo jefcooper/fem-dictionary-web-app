@@ -32,6 +32,10 @@
   --theme-select-focus: #{colors.$clr-accent-300};
   --theme-select-popup: #{colors.$clr-neutral-50};
   --theme-select-shadow: 0px 5px 30px hsl(0 0% 0% / 10%);
+
+  --theme-synonym-label: #{colors.$clr-neutral-400};
+
+  --theme-horizontal-rule: #{colors.$clr-neutral-400};
 }
 
 .theme--light {

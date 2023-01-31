@@ -49,14 +49,18 @@ Users should be able to:
 
 ### To Do
 
-- busy spinner or indication
-- part of speech horizontal rule
-- synonyms horizontal list and accent color
 - font dropdown keyboard navigation
 - search typography
+- part of speech horizontal rule
+- synonyms horizontal list and accent color
+- padding at bottom of page
 - vertical spacing
 - adjust tablet desktop spacing as necessary
 - animated transitions
+- when #keyword is in url, use it for search term. i.e. permalinks.
+- make synonym/antonym words clickable links
+- ~~pseudo navigation via # in route. update with current keyword to allow bookmarking~~
+- ~~busy spinner or indication~~
 - ~~style error section~~
 - ~~styling of select dropdown for font style change~~
 - ~~render error text~~
@@ -68,6 +72,9 @@ Users should be able to:
 ### What I learned
 
 ### Bugs and Finishing Steps
+
+- "bogus" shows bullets not aligned for synonyms on individual definitions. Phonetic pronunciation not
+  showing, so api not returning root level pronunciation, need to go into list and get first if not found.
 
 ### Useful resources
 

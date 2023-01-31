@@ -10,12 +10,33 @@ const searchButton = document.getElementById("search-button");
 const searchTerm = document.getElementById("search-term");
 const keywordPlayButton = document.querySelector("[data-keyword__play]");
 
-searchButton.addEventListener("click", search);
+searchButton.addEventListener("click", initiateSearch);
+
+function initiateSearch(keyword) {
+  const searchFor = keyword || searchTerm.value;
+  if (searchFor) {
+    location.assign(location.href.split("#")[0] + "#" + searchFor);
+  }
+}
+
+console.log("location: " + location.href.split("#")[1]);
+const initialKeyword = location.href.split("#")[1];
+if (initialKeyword) {
+  search(initialKeyword);
+}
+
+window.addEventListener("hashchange", (evt) => {
+  console.log("keyword: " + location.href.split("#")[1]);
+  const keyword = location.href.split("#")[1];
+  if (keyword) {
+    search(keyword);
+  }
+});
 
 // if enter key on searchTerm, then also search
 searchTerm.addEventListener(
   "keydown",
-  (evt) => evt.key === "Enter" && search()
+  (evt) => evt.key === "Enter" && initiateSearch()
 );
 
 keywordPlayButton.addEventListener("click", (evt) => {
@@ -23,9 +44,10 @@ keywordPlayButton.addEventListener("click", (evt) => {
   audioEl.play();
 });
 
-function search() {
+function search(term) {
   setDataState("busy");
-  dictionarySearch(searchTerm.value).then((result) => {
+  const keyword = term || searchTerm.value;
+  dictionarySearch(keyword).then((result) => {
     if (result.error) {
       setDataState("error");
       fillError(result);
@@ -33,6 +55,7 @@ function search() {
       setDataState("keyword");
       fillKeyword(result[0]);
       fillDefinitions(result);
+      searchTerm.value = "";
     }
   });
 }

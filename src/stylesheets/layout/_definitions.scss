@@ -29,12 +29,12 @@
   padding-left: 1rem;
   margin-top: 1rem;
 }
-.definition__meaning-list li {
+.definition__meaning-list > li {
   position: relative;
   list-style: none;
 }
 
-.definition__meaning-list li::before {
+.definition__meaning-list > li::before {
   position: absolute;
   display: inline-block;
   content: "\2022";

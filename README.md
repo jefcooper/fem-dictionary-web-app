@@ -55,6 +55,7 @@ Users should be able to:
 - vertical spacing
 - adjust tablet desktop spacing as necessary
 - animated transitions
+- example text color 50% opacity, example on keyboard
 - ~~padding at bottom of page~~
 - ~~make synonym/antonym words clickable links~~
 - ~~part of speech horizontal rule~~
@@ -73,8 +74,9 @@ Users should be able to:
 
 ### Bugs and Finishing Steps
 
-- "bogus" shows bullets not aligned for synonyms on individual definitions. Phonetic pronunciation not
-  showing, so api not returning root level pronunciation, need to go into list and get first if not found.
+- ~~"bogus" shows bullets not aligned for synonyms on individual definitions. Phonetic pronunciation not~~
+  ~~showing, so api not returning root level pronunciation, need to go into list and get first if not found.~~
+- pronunciation not found on root, showing 'undefined'. Find in list and/or show blank instead of undefined.
 
 ### Useful resources
 

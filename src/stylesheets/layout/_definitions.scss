@@ -9,7 +9,17 @@
 .definitions {
 }
 .definition__part-of-speech {
-  margin-top: 2rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+}
+
+.definition__part-of-speech::after {
+  content: "";
+  align-self: center;
+  background-color: var(--theme-horizontal-rule);
+  height: 1px;
 }
 
 .definition__meaning-label {

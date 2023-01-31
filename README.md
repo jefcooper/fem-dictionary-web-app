@@ -51,13 +51,13 @@ Users should be able to:
 
 - font dropdown keyboard navigation
 - search typography
-- part of speech horizontal rule
 - synonyms horizontal list and accent color
 - padding at bottom of page
 - vertical spacing
 - adjust tablet desktop spacing as necessary
 - animated transitions
 - make synonym/antonym words clickable links
+- ~~part of speech horizontal rule~~
 - ~~when #keyword is in url, use it for search term. i.e. permalinks.~~
 - ~~pseudo navigation via # in route. update with current keyword to allow bookmarking~~
 - ~~busy spinner or indication~~

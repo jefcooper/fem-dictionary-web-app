@@ -141,10 +141,16 @@ function fillDefinitions(data) {
             .class("definition__synonym-list")
             .addTo(liEl);
           for (const syn of defn.synonyms) {
-            element("li")
+            const liEl = element("li")
               .class("definition__synonym")
-              .text(syn)
               .addTo(defnSynUlEl);
+            element("a")
+              .text(syn)
+              .attribute(
+                "href",
+                location.origin + location.pathname + "#" + syn
+              )
+              .addTo(liEl);
           }
         }
         if (defn.antonyms.length) {
@@ -156,7 +162,14 @@ function fillDefinitions(data) {
             .class("definition__antonym-list")
             .addTo(liEl);
           for (const ant of defn.antonyms) {
-            element("li").class("definition__antonym").text(ant).addTo(liEl);
+            const liEl = element("li").class("definition__antonym").addTo(liEl);
+            element("a")
+              .text(ant)
+              .attribute(
+                "href",
+                location.origin + location.pathname + "#" + ant
+              )
+              .addTo(liEl);
           }
         }
       }
@@ -171,7 +184,13 @@ function fillDefinitions(data) {
           .addTo(definitions);
 
         for (const syn of partOfSpeech.synonyms) {
-          element("li").text(syn).class("definition__synonym").addTo(synUlEl);
+          const liEl = element("li")
+            .class("definition__synonym")
+            .addTo(synUlEl);
+          element("a")
+            .text(syn)
+            .attribute("href", location.origin + location.pathname + "#" + syn)
+            .addTo(liEl);
         }
       }
       if (partOfSpeech.antonyms.length) {
@@ -185,7 +204,13 @@ function fillDefinitions(data) {
           .addTo(definitions);
 
         for (const ant of partOfSpeech.antonyms) {
-          element("li").text(ant).class("definition__antonym").addTo(antUlEl);
+          const liEl = element("li")
+            .class("definition__antonym")
+            .addTo(antUlEl);
+          element("a")
+            .text(ant)
+            .attribute("href", location.origin + location.pathname + "#" + ant)
+            .addTo(liEl);
         }
       }
     }

@@ -51,11 +51,11 @@ Users should be able to:
 
 - font dropdown keyboard navigation
 - search typography
-- synonyms horizontal list and accent color
 - vertical spacing
 - adjust tablet desktop spacing as necessary
 - animated transitions
-- example text color 50% opacity, example on keyboard
+- ~~synonyms horizontal list and accent color~~
+- ~~example text color 50% opacity, example on keyboard~~
 - ~~padding at bottom of page~~
 - ~~make synonym/antonym words clickable links~~
 - ~~part of speech horizontal rule~~

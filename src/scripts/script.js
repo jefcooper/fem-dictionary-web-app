@@ -87,7 +87,7 @@ function fillKeyword(data) {
   const pronunciationEl = document.querySelector(
     "[data-keyword__pronunciation]"
   );
-  pronunciationEl.innerText = data.phonetic;
+  pronunciationEl.innerText = data.phonetic || "";
 
   // return first non-empty audio tag
   let audioUrl = data.phonetics.find((e) => {

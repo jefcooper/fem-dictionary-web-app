@@ -57,8 +57,8 @@ Users should be able to:
 - vertical spacing
 - adjust tablet desktop spacing as necessary
 - animated transitions
-- when #keyword is in url, use it for search term. i.e. permalinks.
 - make synonym/antonym words clickable links
+- ~~when #keyword is in url, use it for search term. i.e. permalinks.~~
 - ~~pseudo navigation via # in route. update with current keyword to allow bookmarking~~
 - ~~busy spinner or indication~~
 - ~~style error section~~

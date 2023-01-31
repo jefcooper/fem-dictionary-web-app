@@ -56,7 +56,7 @@ Users should be able to:
 - vertical spacing
 - adjust tablet desktop spacing as necessary
 - animated transitions
-- make synonym/antonym words clickable links
+- ~~make synonym/antonym words clickable links~~
 - ~~part of speech horizontal rule~~
 - ~~when #keyword is in url, use it for search term. i.e. permalinks.~~
 - ~~pseudo navigation via # in route. update with current keyword to allow bookmarking~~

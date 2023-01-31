@@ -52,10 +52,10 @@ Users should be able to:
 - font dropdown keyboard navigation
 - search typography
 - synonyms horizontal list and accent color
-- padding at bottom of page
 - vertical spacing
 - adjust tablet desktop spacing as necessary
 - animated transitions
+- ~~padding at bottom of page~~
 - ~~make synonym/antonym words clickable links~~
 - ~~part of speech horizontal rule~~
 - ~~when #keyword is in url, use it for search term. i.e. permalinks.~~

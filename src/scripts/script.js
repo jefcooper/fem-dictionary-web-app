@@ -129,6 +129,7 @@ function fillDefinitions(data) {
           element("p")
             .text(defn.example)
             .class("definition__example")
+            .class("text--1")
             .addTo(liEl);
         }
 
@@ -174,14 +175,15 @@ function fillDefinitions(data) {
         }
       }
       if (partOfSpeech.synonyms.length) {
+        const div = element("div").addTo(definitions);
         element("h3")
           .text("Synonyms")
           .class("definition__synonym-label")
           .class("heading--3")
-          .addTo(definitions);
+          .addTo(div);
         const synUlEl = element("ul")
           .class("definition__synonym-list")
-          .addTo(definitions);
+          .addTo(div);
 
         for (const syn of partOfSpeech.synonyms) {
           const liEl = element("li")
@@ -194,14 +196,15 @@ function fillDefinitions(data) {
         }
       }
       if (partOfSpeech.antonyms.length) {
+        const div = element("div").addTo(definitions);
         element("h3")
           .text("Antonyms")
           .class("definition__antonym-label")
           .class("heading--3")
-          .addTo(definitions);
+          .addTo(div);
         const antUlEl = element("ul")
           .class("definition__antonym-list")
-          .addTo(definitions);
+          .addTo(div);
 
         for (const ant of partOfSpeech.antonyms) {
           const liEl = element("li")

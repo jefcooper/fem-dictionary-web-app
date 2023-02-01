@@ -51,9 +51,11 @@ Users should be able to:
 
 - font dropdown keyboard navigation
 - search typography
-- vertical spacing
-- adjust tablet desktop spacing as necessary
 - animated transitions
+- a11y testing and tweaks
+- ~~vertical spacing (use 'illegal' as an example)~~
+- ~~spacing between definition and example~~
+- ~~adjust tablet desktop spacing as necessary~~
 - ~~synonyms horizontal list and accent color~~
 - ~~example text color 50% opacity, example on keyboard~~
 - ~~padding at bottom of page~~
@@ -76,7 +78,7 @@ Users should be able to:
 
 - ~~"bogus" shows bullets not aligned for synonyms on individual definitions. Phonetic pronunciation not~~
   ~~showing, so api not returning root level pronunciation, need to go into list and get first if not found.~~
-- pronunciation not found on root, showing 'undefined'. Find in list and/or show blank instead of undefined.
+- ~~pronunciation not found on root, showing 'undefined'. Find in list and/or show blank instead of undefined.~~
 
 ### Useful resources
 

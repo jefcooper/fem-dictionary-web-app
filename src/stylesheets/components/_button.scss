@@ -8,3 +8,6 @@
 
 .btn--icon {
 }
+.btn--icon:focus-visible {
+  outline-color: var(--theme-select-focus);
+}

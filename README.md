@@ -50,9 +50,10 @@ Users should be able to:
 ### To Do
 
 - font dropdown keyboard navigation
-- search typography
 - animated transitions
 - a11y testing and tweaks
+- ~~search typography~~
+- ~~focus color~~
 - ~~vertical spacing (use 'illegal' as an example)~~
 - ~~spacing between definition and example~~
 - ~~adjust tablet desktop spacing as necessary~~

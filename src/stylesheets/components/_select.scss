@@ -23,6 +23,9 @@
   user-select: none;
   cursor: pointer;
 }
+.select__control:focus-visible {
+  outline-color: var(--theme-select-focus);
+}
 
 .select__popup {
   position: absolute;

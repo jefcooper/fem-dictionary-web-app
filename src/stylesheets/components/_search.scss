@@ -11,6 +11,9 @@
   border: 0;
   background-color: var(--theme-search-bg);
 }
+.search__input:focus-visible {
+  outline-color: var(--theme-select-focus);
+}
 
 .search__label {
   position: absolute;

@@ -75,6 +75,10 @@ function createSelectBox(parentDiv) {
   const selectEl = selectFromDiv(parentDiv);
   const divEl = element("div")
     .class("select__control")
+    .attribute("role", "combobox")
+    .attribute("aria-haspopup", "listbox")
+    .attribute("aria-labelledby", "font-theme-select__label")
+    .attribute("aria-controls", "font-theme-select__listbox")
     .attribute("aria-expanded", "false")
     .attribute("tabindex", 0)
     .addTo(parentDiv);
@@ -110,13 +114,20 @@ function createSelectBox(parentDiv) {
       evt.stopPropagation();
     }
   });
-  const popupDiv = element("div").class("select__popup").addTo(parentDiv);
+  const popupDiv = element("div")
+    .attribute("id", "font-theme-select__listbox")
+    .attribute("role", "listbox")
+    .attribute("aria-labelledby", "font-theme-select__label")
+    .attribute("tabindex", "-1")
+    .class("select__popup")
+    .addTo(parentDiv);
   const options = selectOptions(selectEl);
 
   const optionList = element("ul").addTo(popupDiv);
   options.forEach((opt) => {
     const className = "text--" + opt.value.replaceAll(" ", "-").toLowerCase();
     const liEl = element("li")
+      .attribute("role", "option")
       .text(opt.value)
       .class(className)
       .addTo(optionList);

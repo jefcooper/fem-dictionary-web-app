@@ -51,11 +51,14 @@ Users should be able to:
 
 - font dropdown keyboard navigation
 - search typography
-- synonyms horizontal list and accent color
-- padding at bottom of page
-- vertical spacing
-- adjust tablet desktop spacing as necessary
 - animated transitions
+- a11y testing and tweaks
+- ~~vertical spacing (use 'illegal' as an example)~~
+- ~~spacing between definition and example~~
+- ~~adjust tablet desktop spacing as necessary~~
+- ~~synonyms horizontal list and accent color~~
+- ~~example text color 50% opacity, example on keyboard~~
+- ~~padding at bottom of page~~
 - ~~make synonym/antonym words clickable links~~
 - ~~part of speech horizontal rule~~
 - ~~when #keyword is in url, use it for search term. i.e. permalinks.~~
@@ -73,8 +76,9 @@ Users should be able to:
 
 ### Bugs and Finishing Steps
 
-- "bogus" shows bullets not aligned for synonyms on individual definitions. Phonetic pronunciation not
-  showing, so api not returning root level pronunciation, need to go into list and get first if not found.
+- ~~"bogus" shows bullets not aligned for synonyms on individual definitions. Phonetic pronunciation not~~
+  ~~showing, so api not returning root level pronunciation, need to go into list and get first if not found.~~
+- ~~pronunciation not found on root, showing 'undefined'. Find in list and/or show blank instead of undefined.~~
 
 ### Useful resources
 

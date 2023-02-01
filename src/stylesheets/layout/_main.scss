@@ -3,6 +3,7 @@
 .main {
   @include mixins.container;
   padding-inline: 1.5rem;
+  padding-bottom: 5.3125rem;
 }
 .main:not([data-state="busy"]) {
   .busy {

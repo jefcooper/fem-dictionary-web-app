@@ -10,7 +10,7 @@ const searchButton = document.getElementById("search-button");
 const searchTerm = document.getElementById("search-term");
 const keywordPlayButton = document.querySelector("[data-keyword__play]");
 
-searchButton.addEventListener("click", initiateSearch);
+searchButton.addEventListener("click", () => initiateSearch());
 
 function initiateSearch(keyword) {
   const searchFor = keyword || searchTerm.value;

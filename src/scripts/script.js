@@ -15,7 +15,9 @@ searchButton.addEventListener("click", () => initiateSearch());
 function initiateSearch(keyword) {
   const searchFor = keyword || searchTerm.value;
   if (searchFor) {
-    location.assign(location.href.split("#")[0] + "#" + searchFor);
+    location.assign(
+      location.href.split("#")[0] + "#" + encodeURIComponent(searchFor)
+    );
   }
 }
 
@@ -27,7 +29,7 @@ if (initialKeyword) {
 
 window.addEventListener("hashchange", (evt) => {
   console.log("keyword: " + location.href.split("#")[1]);
-  const keyword = location.href.split("#")[1];
+  const keyword = decodeURIComponent(location.href.split("#")[1]);
   if (keyword) {
     search(keyword);
   }
@@ -149,7 +151,10 @@ function fillDefinitions(data) {
               .text(syn)
               .attribute(
                 "href",
-                location.origin + location.pathname + "#" + syn
+                location.origin +
+                  location.pathname +
+                  "#" +
+                  encodeURIComponent(syn)
               )
               .addTo(liEl);
           }
@@ -168,7 +173,10 @@ function fillDefinitions(data) {
               .text(ant)
               .attribute(
                 "href",
-                location.origin + location.pathname + "#" + ant
+                location.origin +
+                  location.pathname +
+                  "#" +
+                  encodeURIComponent(ant)
               )
               .addTo(liEl);
           }
@@ -191,7 +199,13 @@ function fillDefinitions(data) {
             .addTo(synUlEl);
           element("a")
             .text(syn)
-            .attribute("href", location.origin + location.pathname + "#" + syn)
+            .attribute(
+              "href",
+              location.origin +
+                location.pathname +
+                "#" +
+                encodeURIComponent(syn)
+            )
             .addTo(liEl);
         }
       }
@@ -212,7 +226,13 @@ function fillDefinitions(data) {
             .addTo(antUlEl);
           element("a")
             .text(ant)
-            .attribute("href", location.origin + location.pathname + "#" + ant)
+            .attribute(
+              "href",
+              location.origin +
+                location.pathname +
+                "#" +
+                encodeURIComponent(ant)
+            )
             .addTo(liEl);
         }
       }

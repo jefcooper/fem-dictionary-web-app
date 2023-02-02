@@ -15,10 +15,11 @@
   grid-auto-flow: column;
   gap: 1.125rem;
 
-  width: 7rem;
+  width: 8rem;
   padding-block: 1.125em;
   padding-inline: 0;
-  margin-right: 1.625rem;
+  padding-right: 1.125rem;
+  margin-right: 0.5rem;
   text-transform: capitalize;
   user-select: none;
   cursor: pointer;
@@ -55,4 +56,7 @@
 }
 .select__popup li {
   text-transform: capitalize;
+}
+.select__popup li[aria-selected="true"] {
+  color: var(--theme-select-focus);
 }

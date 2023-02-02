@@ -136,7 +136,12 @@ function createSelectBox(parentDiv) {
           evt.stopPropagation();
         }
       }
-    } else if (evt.key === "ArrowDown" || evt.key === "ArrowUp") {
+    } else if (
+      evt.key === "ArrowDown" ||
+      evt.key === "j" ||
+      evt.key === "ArrowUp" ||
+      evt.key === "k"
+    ) {
       console.log("arrow key: " + evt.key);
       if (!expanded) {
         openMenu();
@@ -147,12 +152,12 @@ function createSelectBox(parentDiv) {
           el.hasAttribute("aria-selected")
         );
         let newIndex = selectedIndex;
-        if (evt.key === "ArrowDown") {
+        if (evt.key === "ArrowDown" || evt.key === "j") {
           newIndex++;
           if (newIndex > optlist.length - 1) {
             newIndex = 0;
           }
-        } else if (evt.key === "ArrowUp") {
+        } else if (evt.key === "ArrowUp" || evt.key === "k") {
           newIndex--;
           if (newIndex < 0) {
             newIndex = optlist.length - 1;

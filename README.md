@@ -49,9 +49,9 @@ Users should be able to:
 
 ### To Do
 
-- font dropdown keyboard navigation
 - animated transitions
 - a11y testing and tweaks
+- ~~font dropdown keyboard navigation~~
 - ~~search typography~~
 - ~~focus color~~
 - ~~vertical spacing (use 'illegal' as an example)~~

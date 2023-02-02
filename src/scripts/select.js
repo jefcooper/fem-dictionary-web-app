@@ -93,26 +93,14 @@ function createSelectBox(parentDiv) {
   divEl.addEventListener("click", (evt) => {
     const expanded = divEl.getAttribute("aria-expanded") === "true";
     if (expanded) {
-      divEl.setAttribute("aria-expanded", "false");
+      closeMenu();
+      //divEl.setAttribute("aria-expanded", "false");
     } else {
-      divEl.setAttribute("aria-expanded", "true");
+      openMenu();
+      //divEl.setAttribute("aria-expanded", "true");
     }
     evt.preventDefault();
     evt.stopPropagation();
-  });
-  divEl.addEventListener("keydown", (evt) => {
-    if (evt.key === "Enter" || evt.key === " " || evt.key === "Escape") {
-      const expanded = divEl.getAttribute("aria-expanded") === "true";
-      if (expanded) {
-        divEl.setAttribute("aria-expanded", "false");
-      } else {
-        if (evt.key !== "Escape") {
-          divEl.setAttribute("aria-expanded", "true");
-        }
-      }
-      evt.preventDefault();
-      evt.stopPropagation();
-    }
   });
   const popupDiv = element("div")
     .attribute("id", "font-theme-select__listbox")
@@ -121,6 +109,72 @@ function createSelectBox(parentDiv) {
     .attribute("tabindex", "-1")
     .class("select__popup")
     .addTo(parentDiv);
+  divEl.addEventListener("keydown", (evt) => {
+    const expanded = divEl.getAttribute("aria-expanded") === "true";
+    if (
+      evt.key === "Enter" ||
+      evt.key === " " ||
+      evt.key === "Escape" ||
+      evt.key === "Tab"
+    ) {
+      if (expanded) {
+        closeMenu();
+        //divEl.setAttribute("aria-expanded", "false");
+        if (evt.key === "Enter" || evt.key === "Tab") {
+          setToSelected();
+        }
+
+        if (evt.key !== "Tab") {
+          evt.preventDefault();
+          evt.stopPropagation();
+        }
+      } else {
+        if (evt.key !== "Escape" && evt.key !== "Tab") {
+          openMenu();
+          //divEl.setAttribute("aria-expanded", "true");
+          evt.preventDefault();
+          evt.stopPropagation();
+        }
+      }
+    } else if (
+      evt.key === "ArrowDown" ||
+      evt.key === "j" ||
+      evt.key === "ArrowUp" ||
+      evt.key === "k"
+    ) {
+      console.log("arrow key: " + evt.key);
+      if (!expanded) {
+        openMenu();
+        //divEl.setAttribute("aria-expanded", "true");
+      } else {
+        const optlist = Array.from(popupDiv.children[0].children);
+        const selectedIndex = optlist.findIndex((el) =>
+          el.hasAttribute("aria-selected")
+        );
+        let newIndex = selectedIndex;
+        if (evt.key === "ArrowDown" || evt.key === "j") {
+          newIndex++;
+          if (newIndex > optlist.length - 1) {
+            newIndex = 0;
+          }
+        } else if (evt.key === "ArrowUp" || evt.key === "k") {
+          newIndex--;
+          if (newIndex < 0) {
+            newIndex = optlist.length - 1;
+          }
+        }
+        console.log("old index: " + selectedIndex);
+        console.log("new index: " + newIndex);
+        optlist[selectedIndex].removeAttribute("aria-selected");
+        optlist[newIndex].setAttribute("aria-selected", "true");
+      }
+
+      evt.preventDefault();
+      evt.stopPropagation();
+    } else {
+      console.log("key: " + evt.key);
+    }
+  });
   const options = selectOptions(selectEl);
 
   const optionList = element("ul").addTo(popupDiv);
@@ -131,13 +185,50 @@ function createSelectBox(parentDiv) {
       .text(opt.value)
       .class(className)
       .addTo(optionList);
+    if (opt.value === selectEl.value) {
+      liEl.setAttribute("aria-selected", "true");
+    }
     liEl.addEventListener("click", (evt) => {
       divEl.children[0].innerText = liEl.innerText;
       selectEl.value = liEl.innerText;
       selectEl.dispatchEvent(new Event("change"));
-      divEl.setAttribute("aria-expanded", "false");
+      closeMenu();
+      //divEl.setAttribute("aria-expanded", "false");
+      selectOption(optionList, liEl.innerText);
       evt.preventDefault();
       evt.stopPropagation();
     });
+  });
+
+  function openMenu() {
+    // set selected to match combo text value
+    selectOption(optionList, divEl.children[0].innerText);
+
+    // set expanded to show popup
+    divEl.setAttribute("aria-expanded", "true");
+  }
+
+  function closeMenu() {
+    divEl.setAttribute("aria-expanded", "false");
+  }
+  function setToSelected() {
+    const optionText = Array.from(optionList.children).find(
+      (el) => el.getAttribute("aria-selected") === "true"
+    )?.innerText;
+    console.log("optionText: " + optionText);
+    divEl.children[0].innerText = optionText;
+    selectEl.value = optionText;
+    selectEl.dispatchEvent(new Event("change"));
+    divEl.setAttribute("aria-expanded", "false");
+  }
+}
+
+function selectOption(optionList, selected) {
+  Array.from(optionList.children).forEach((opt) => {
+    if (opt.innerText !== selected) {
+      opt.removeAttribute("aria-selected");
+    } else {
+      opt.setAttribute("aria-selected", "true");
+    }
   });
 }
